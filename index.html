@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scheduler</title>
+</head>
+<aside>
+    <div class="taskList" draggable="true" ondragstart="drag(event)">
+        <div >
+            <input type="checkbox" id="task1" checked>
+            <label for="task1" id="task1Label" draggable="true" ondragstart="drag(Event)"><input type="text"></label>
+        </div>
+       
+        <div>
+            <input type="checkbox"id=task2 >
+            <label for="task2" id="task2Label" draggable="true" ondragstart="drag(Event)"><input type="text"></label>
+        </div>
+        <div>
+            <input type="checkbox" id="task3">
+            <label for="task3"  id="task3Label" draggable="true" ondragstart="drag(Event)"><input type="text"></label>
+        </div>   
+    </div>
+
+</aside>
+<body>
+    <main>
+        <table> 
+            <tr>
+                
+                <thead>
+                    <th>Time</th>
+                    <th>Sunday</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                </thead>
+            </tr>
+            <tbody>
+                <tr>
+                    <td>5</td>
+                    <td id="Sun5amTask" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="MonamTask" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                    <td id="Tue5amTask" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+                </tr> 
+                <tr><td>6</td></tr>
+                <tr><td>7</td></tr>
+                <tr><td>8</td></tr>
+                <tr><td>9</td></tr>
+                <tr><td>10</td></tr>
+                <tr><td>11</td></tr>
+                <tr><td>12</td></tr>
+                <tr><td>1</td></tr>
+                
+            </tbody>
+            <tfooter>
+                <td>some data</td>
+                <td>some data</td>
+            </tfooter>
+        </table>
+    </main>
+</body>
+
+<script src="app.js"></script>
+<script src="draggable.js"></script>
+<!-- <script>
+    function allowDrop(ev) {
+    ev.preventDefault();
+    }
+
+    function drag(ev) {
+    console.log("drag event initiated")
+    ev.dataTransfer.setData("text", ev.target.id);
+    console.log( ev.dataTransfer.setData("text", ev.target.id))
+    }
+
+    function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+    }
+
+</script>
+ -->
+</html>
